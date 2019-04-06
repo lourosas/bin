@@ -30,6 +30,8 @@ public class TestThreads2{
 }
 
 class Pressure implements Runnable{
+//   static Object o = new Object();
+
    public Pressure(){}
 
    public void run(){
@@ -37,10 +39,12 @@ class Pressure implements Runnable{
    }
 
    private void raisePressure(){
+//      synchronized(o){
       if(TestThreads2.pressureGuage < TestThreads2.safetyLimit - 5){
          System.out.println(Thread.currentThread().getName());
          try{ Thread.sleep(1000); } catch(Exception e){}
          TestThreads2.pressureGuage += 15;
       }
+//      }
    }
 }
