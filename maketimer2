@@ -1,7 +1,7 @@
-clear
-cd /home/lou/javaclasses/rosas/lou
+cd /home/lou/javaclasses/rosas
 find . -name '*.class' -delete
 cd /home/lou/javaclasses/myclasses
 find . -name '*.class' -delete
 cd /home/lou/bin/
 find . -name '*.class' -delete
+javac Timer2.java
