@@ -1,7 +1,10 @@
 //////////////////////////////////////////////////////////////////////
-///
 import java.lang.*;
 import java.util.*;
+import java.awt.*;
+import java.io.*;
+import javax.swing.*;
+import rosas.lou.corejava.ImageViewerFrame;
 
 public class ImageViewerTest{
    public static void main(String[] args){
@@ -15,6 +18,13 @@ public class ImageViewerTest{
          System.out.print("=");
       }
       System.out.println();
+      EventQueue.invokeLater(() -> 
+            {
+               JFrame frame = new ImageViewerFrame();
+               frame.setTitle("Image Viewer");
+               frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+               frame.setVisible(true);
+            });
    }
 }
 //////////////////////////////////////////////////////////////////////
